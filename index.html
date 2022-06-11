@@ -1,0 +1,125 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<meta name="viewport" content="initial-scale=1.0">
+		<title>wow</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+	</head>
+	<body class="text-white bkg-black">
+		<div id="wrapper">
+			<div id="gameOver" class="d-none text-center font-xxl">
+				Game Over
+			</div>
+			<div class="menu text-black d-none">
+				<div class="text-center">
+					<div class="subtitle">The Legend of</div>
+					<div class="title text-italic font-xxl">Zordlo</div>
+				</div>
+				<div class="rock"></div>
+				<div class="rock3"></div>
+				<div class="rock2"></div>
+				<button>Start</button>
+		</div>
+
+		<div id="game">
+			<div class="flex" id="hud">
+				<div class="fb-30">
+					<div class="text-center font-lg">-LEVEL 1-</div>
+					<canvas class="m-auto bkg-black" id="mapCanvas" width="0" height="0"></canvas>
+				</div>
+				<div class="fb-20 flex font-md line-height-lg" id="items">
+					<div class="mr-3">
+						<div class="flex">
+							<div class="pickup money"></div>
+							<span>x</span>
+							<span id="money">0</span>
+						</div>
+						<div class="flex">
+							<div class="pickup key"></div>
+							<span>x</span>
+							<span id="keys">0</span>
+						</div>
+						<div class="flex">
+							<div class="pickup bombs"></div>
+							<span>x</span>
+							<span id="bombs">0</span>
+						</div>
+					</div>
+					<div class="ml-3">
+						<div class="pickup boss-key d-none mb-3"></div>
+						<div class="pickup potion d-none"></div>
+					</div>	
+				</div>
+				<div class="flex fb-20" id="equipment">
+					<div class="shield mr-3 fb-50 blue-box bkg-img-centered"></div>
+					<div class="sword fb-50 blue-box bkg-img-centered"></div>
+				</div>
+			<div id="healthWrapper" class="fb-30">
+				<div class="red font-lg text-center">-LIFE-</div>
+				<div id="hearts" class="flex">
+					<div class="heart-outline pickup"></div>
+					<div class="heart-outline pickup"></div>
+					<div class="heart-outline pickup"></div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div id="background" class="bkg-img p-absolute dungeon-bkg"></div>
+			<canvas id="tilesCanvas" class="p-absolute" width="1024" height="700"></canvas>
+			<canvas id="gameCanvas" class="p-absolute" width="1024" height="700"></canvas>
+		</div>
+	</div>
+		<div id="directionButtons">
+			<button id="upButton">-</button>
+			<div>
+			<button id="leftButton">|</button>
+			<button id="rightButton">|</button>
+			</div>
+			<button id="downButton">-</button>
+		</div>
+		<div id="actionButtons">
+			<button id="aButton">a
+			</button><button id="bButton">b
+		</button></div>
+
+		<div id="debugButtons" class="flex p-absolute p-sm bkg-black">
+			<div class="d-grid grid-2-col">
+				<div>up:</div><div class="up-button">false</div>
+				<div>down:</div><div class="down-button">false</div>
+				<div>left: </div><div class="left-button">false</div>
+				<div>right: </div><div class="right-button">false</div>
+				<div>a: </div><div class="a-button">false</div>
+				<div>b: </div><div class="b-button">false</div>
+			</div>
+			<div>
+				<img src="js/controller.png">
+			</div>
+		</div>
+
+		<div id="debug" class="p-absolute d-none">
+			<b>warp</b>
+			<div class="d-grid grid-5-cols"></div>
+		</div>
+	</div>
+	<style>
+		.rock3 {
+			height: 64px;
+			width: 64px;
+			background: url('rock_3.png');
+		}
+		.rock2 {
+			height: 64px;
+			width: 64px;
+			background: url('rock_2.png');
+		}
+		.rock {
+			width: 64px;
+			height: 64px;
+			background: url('rock.png');
+		}
+	</style>
+		<script src="dist/main.js"></script>
+</body></html>

@@ -1,0 +1,169 @@
+body {
+	font-family: 'Press Start 2P', cursive;
+}
+.text-white { color: white; }
+.text-black { color: black }
+.font-lg { font-size: 2em; }
+.font-md { font-size: 1.5em; }
+.font-xxl { font-size: 5em; }
+.line-height-lg {line-height: 2em;}
+.text-center { text-align: center; }
+.text-italic { font-style: italic; }
+.bkg-black { background: black; }
+.p-absolute { position: absolute; }
+
+.red { color: red; }
+.mr-3 { margin-right: 16px; }
+.mb-3 { margin-bottom: 16px; }
+.ml-3 { margin-left: 16px; }
+
+.m-auto { margin: auto; }
+.flex { display: flex; }
+.fb-50 { flex-basis: 50%; }
+.fb-30 { flex-basis: 30%; }
+.fb-20 { flex-basis: 20%; }
+.p-sm { padding: 6px; }
+.py-sm { padding: 16px 0; }
+.d-none {
+	display: none;
+}
+.d-grid {
+	display: grid;
+}
+.grid-2-col {
+	grid-template-columns: 1fr 1fr;
+}
+.grid-5-cols {
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.pickup {
+	background: url('../img/hud/pickups.png');
+	height: 48px;
+	width: 48px;
+	background-position-x: 0;
+}
+.money { background-position-y: -48px; }
+.key { background-position-y: -96px; }
+.bombs { background-position-y: -240px; }
+.boss-key { background-position-y: -288px; }
+.potion { background-position-y: -336px; }
+.heart-outline, .heart-half, .heart {
+	background: url('../img/hud/health.png');
+}
+.heart-half {
+	background-position-x: 128px;
+}
+.heart {
+	background-position-x: 64px;
+}
+
+
+.blue-box {
+	border: solid blue;
+	height: 150px;
+	border-radius: 5px;
+}
+.bkg-img-centered {
+	background-repeat: no-repeat; 
+	background-position: center; 
+} 
+.bkg-img {
+	background-repeat: repeat;
+	background-position-x: 0;
+	background-position-y: 0;
+	width: 1024px;
+	height: 704px;
+}
+.sword { 
+	background-image: url('../img/hud/sword.png'); 
+} 
+.shield { 
+	background-image: url('../img/hud/shield.png'); 
+}
+.menu {
+	height: 100%;
+	background: #e9a9a9;
+}
+
+.menu .subtitle {
+
+}
+.menu .title {
+	color: #993516;
+	text-shadow: 7px 0 black;
+}
+#hud {
+	width: 1024px;
+	background: #1b1b1b;
+}
+#debugButtons { 
+	right: 0;
+	top: 0;
+}
+#debug {
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	top: 0;
+	left: 0;
+}
+#directionButtons {
+	margin-top: 850px;
+	margin-left: 15%;
+}
+#directionButtons button {
+	width: 15%;
+	height: 15%;
+}
+#upButton {
+}
+#downButton {
+}
+#leftButton {
+	margin-left: -15%;
+}
+#rightButton {
+	margin-left: 15%;
+}
+#wrapper {
+	margin: auto;
+	width: 1024px;
+}
+.dungeon-bkg {
+background-color: gray;
+background-image: url('../img/dungeon_bkg.png');
+}
+.dungeon-underground-bkg {
+	background: url('../img/dungeon_underground_bkg.png');
+}
+
+#lightmap {
+width: 1024px;
+height: 700px;
+position: absolute;
+opacity: 0.8;
+}
+#playerLightmap {
+width: 50px;
+height: 50px;
+position: absolute;
+x: 100;
+y: 100;
+border-radius: 25px;
+}
+@media screen and (min-width: 900px) {
+	#directionButtons {
+		display: none;
+	}
+	#wrapper {
+		max-width: 100%;
+		max-height: 1000px;
+	}
+}
+@media screen and (orientation: landscape) and (max-width: 899px) {
+	#hud {
+		display: none;
+	}
+	#wrapper {
+		max-width: 100%;
+		display: flex;
+	}
+}
